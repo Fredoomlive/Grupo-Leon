@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sin Citas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+        <h2>No hay citas registradas aún</h2>
+        <p>Por favor, agende su primera cita para comenzar.</p>
+        <a href="{{ url_for('main.agendar') }}" class="boton">Agendar Cita</a>
+    </div>
+</body>
+
+</html>

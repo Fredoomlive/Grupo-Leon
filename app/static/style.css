@@ -1,0 +1,439 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("/static/abogacia.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedores principales */
+.container,
+.inicio-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    background-color: rgba(255, 215, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Inicio (home.html) */
+.inicio-container {
+    text-align: center;
+    background-color: #6a9bcc;
+}
+
+.inicio h1 {
+
+    font-weight: bold;
+    color: #ffffff;
+    /* Blanco */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    /* Blanco */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.inicio-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #0e3e6e;
+}
+
+
+.inicio-container .bienvenida {
+    font-size: 1.2rem;
+    color: #0082f3;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+.botones-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.boton,
+.btn,
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff8800;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover,
+.btn:hover,
+.button:hover {
+    background-color: #e6c200;
+    transform: scale(1.05);
+}
+
+.btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 14px 28px;
+    background-color: #FFD700;
+    /*color del boton de inicio*/
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background-color: #e6c200;
+    /* cuando se deja el cursor sobre el boton */
+    transform: scale(1.05);
+}
+
+/* Formularios */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+/* Flash messages */
+.flash {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Tablas (como historial.html) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+
+/* --- TÍTULO Y BOTÓN VOLVER --- */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #e6c200;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-volver:hover {
+    text-decoration: underline;
+}
+
+/* --- ETIQUETAS DE CAMPOS --- */
+label {
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+/* --- CAMPOS DEL FORMULARIO --- */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #777;
+    font-family: Arial, sans-serif;
+}
+
+/* --- MENSAJES FLASH DE ERROR --- */
+.flash.error {
+    color: #fff;
+    background-color: #e53935;
+    /* rojo elegante */
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* --- BOTÓN SUBMIT COMO LOS DE INICIO --- */
+input[type="submit"],
+button,
+form button {
+    background-color: #FFD700;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover,
+form button:hover {
+    background-color: #ffffff;
+    transform: scale(1.03);
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.btn-volver:hover {
+    background-color: #ffffff;
+    transform: translateX(-3px);
+}
+
+/* --- ÍCONO dentro del botón volver --- */
+.btn-volver .icon {
+    font-size: 1.2rem;
+}
+
+
+.historial-container {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px 30px;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.historial-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.tabla-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead th {
+    background-color: #B8860B;
+    color: white;
+    padding: 12px 8px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 12px 8px;
+    color: #000000;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #FFD700;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.btn-volver:hover {
+    background-color: #e6c200;
+    transform: translateX(-3px);
+}
+
+.btn-volver .icon {
+    font-size: 1.2rem;
+}
+
+.confirmation-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo con leve opacidad */
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.confirmation-container h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #FFD700;
+}
+
+.confirmation-container p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.confirmation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}

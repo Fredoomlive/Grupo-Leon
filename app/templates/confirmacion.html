@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cita Confirmada</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="confirmation-container">
+        <h1>✅ Cita Agendada</h1>
+
+        <p><span class="highlight">Nombre:</span> {{ cita.nombre_cliente }}</p>
+        <p><span class="highlight">Email:</span> {{ cita.email_cliente }}</p>
+        <p><span class="highlight">Fecha:</span> {{ cita.fecha.strftime('%d/%m/%Y') }}</p>
+        <p><span class="highlight">Asunto:</span><br>{{ cita.asunto }}</p>
+
+        <div class="confirmation-buttons">
+            <a href="{{ url_for('main.home') }}" class="btn">Volver al inicio</a>
+            <a href="{{ url_for('main.historial') }}" class="btn">Ver historial</a>
+        </div>
+    </div>
+</body>
+
+</html>

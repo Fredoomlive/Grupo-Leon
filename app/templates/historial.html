@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Historial de Citas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="historial-container">
+        <h1>Historial de Citas</h1>
+
+        <a href="{{ url_for('main.home') }}" class="btn-volver">
+            <span class="icon">&#8592;</span> Volver al inicio
+        </a>
+
+        <div class="tabla-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Tipo de Asunto</th>
+                        <th>Abogado</th>
+                        <th>Fecha</th>
+                        <th>Asunto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cita in citas %}
+                    <tr>
+                        <td>{{ cita.nombre_cliente }}</td>
+                        <td>{{ cita.email_cliente }}</td>
+                        <td>{{ cita.telefono_cliente }}</td>
+                        <td>{{ cita.tipo_asunto }}</td>
+                        <td>{{ cita.abogado }}</td>
+                        <td>{{ cita.fecha.strftime('%Y-%m-%d') }}</td>
+                        <td>{{ cita.asunto }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
