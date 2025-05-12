@@ -5,6 +5,33 @@
     <meta charset="UTF-8">
     <title>Bufete de Abogados</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .logout-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+
+        .welcome-name {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            font-size: 28px;
+        }
+    </style>
 </head>
 
 <body style="background-image: url('{{ url_for('static', filename='abogacia.jpg') }}');
@@ -13,9 +40,16 @@
              background-repeat: no-repeat;
              background-attachment: fixed;">
 
+    <div class="welcome-name">
+        Bienvenid@, {{ nombre }} {{ apellido }}
+    </div>
+
+    <!-- Botón de cerrar sesión -->
+    <a href="{{ url_for('main.inicio') }}" class="logout-button">Cerrar sesión</a>
+
     <div class="container inicio">
         <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo del Bufete" class="logo">
-        <h1>Bienvenido al Bufete de Abogados</h1>
+        <h1>Bufete de Abogados</h1>
         <p>¿Qué desea hacer hoy?</p>
         <div class="botones">
             <a href="{{ url_for('main.agendar') }}" class="btn">Agendar Cita</a>

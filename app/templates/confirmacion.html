@@ -11,8 +11,7 @@
     <div class="confirmation-container">
         <h1>✅ Cita Agendada</h1>
 
-        <p><span class="highlight">Nombre:</span> {{ cita.nombre_cliente }}</p>
-        <p><span class="highlight">Email:</span> {{ cita.email_cliente }}</p>
+        <p><span class="highlight">Abogado/a:</span><br>{{ cita.abogado.nombre }}</p>
         <p><span class="highlight">Fecha:</span> {{ cita.fecha.strftime('%d/%m/%Y') }}</p>
         <p><span class="highlight">Asunto:</span><br>{{ cita.asunto }}</p>
 

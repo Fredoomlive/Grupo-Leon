@@ -19,25 +19,23 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th>Email</th>
-                        <th>Teléfono</th>
                         <th>Tipo de Asunto</th>
                         <th>Abogado</th>
                         <th>Fecha</th>
                         <th>Asunto</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     {% for cita in citas %}
                     <tr>
-                        <td>{{ cita.nombre_cliente }}</td>
-                        <td>{{ cita.email_cliente }}</td>
-                        <td>{{ cita.telefono_cliente }}</td>
                         <td>{{ cita.tipo_asunto }}</td>
-                        <td>{{ cita.abogado }}</td>
+                        <td>{{ cita.abogado.nombre }}</td>
                         <td>{{ cita.fecha.strftime('%Y-%m-%d') }}</td>
                         <td>{{ cita.asunto }}</td>
+
+                        </form>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

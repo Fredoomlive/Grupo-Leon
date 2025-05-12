@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Abogados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='clientes.jpg') }}');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-attachment: fixed;">
+    <div class="login-container">
+        <h1>Acceso para Abogados</h1>
+
+        <style>
+            .form-control {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+        </style>
+
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.email.label }} {{ form.email(class="form-control") }} <br>
+            {{ form.password.label }} {{ form.password(class="form-control") }} <br>
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+
+        <div style="margin-top: 1em; text-align: center;">
+            <a href="{{ url_for('main.inicio') }}" class="btn btn-secondary">Volver a inicio</a>
+        </div>
+    </div>
+</body>
+
+</html>

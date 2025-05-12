@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bufete de Abogados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="background-image: url('{{ url_for('static', filename='leon.jpg') }}');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             background-attachment: fixed;">
+
+    <div class="container inicio">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo del Bufete" class="logo">
+        <h1>Bienvenido al Bufete de Abogados</h1>
+        <p>Ingrese segun su rol</p>
+        <div class="botones">
+            <a href="{{ url_for('main.cliente_login') }}" class="btn">Cliente</a>
+            <a href="{{ url_for('main.login') }}" class="btn">Abogado</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
